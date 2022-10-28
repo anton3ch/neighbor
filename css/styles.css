@@ -16,8 +16,7 @@ body {
 
 #start {
   position: absolute;
-  
-  width: 50px;
+  width: 150px;
 }
 
 .house {
@@ -28,7 +27,7 @@ body {
   background-position-y: 100%;
   background-size: contain;
   background-repeat: no-repeat; 
-  min-height: 1000px;
+  min-height: 1100px;
   
   
 }
