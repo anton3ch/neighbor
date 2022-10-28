@@ -1,36 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
 html {
   max-height: 1000px !important;
   box-sizing: content-box;
+  font-family: 'Raleway', sans-serif;
+  height: 100% !important;
 }
 
 body {
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(50,9,121,1) 33%, rgba(255,0,254,1) 100%);
-  
+  background-repeat: no-repeat;
 }
 
 .house {
   display: block;
   background-color: transparent;
   background-image: url("house.png");
-  background-position-x:  0%;
-  background-position-y: 50%;
-  background-size: cover;
+  background-position-x:  50%;
+  background-position-y: 100%;
+  background-size: contain;
   background-repeat: no-repeat; 
-  min-height: 800px;
+  min-height: 1000px;
+  
   
 }
 
 #form {
+  display: block;
   width: 100%;
   padding-top: 100px;
+  margin: 50px 0px 50px 0px;
   background-color: transparent;
   background-image: url("../img/inputGhost.png");
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: contain;
-  display: block;
   background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
+
 
 }
 
@@ -40,22 +49,41 @@ body {
 }
 
 label {
-  margin: 2vw;
+  margin: 1vw;
   z-index: 2;
 }
 
 input {
-  margin: 2vw;
+  margin: 1vw;
   z-index: 2;
 }
 
 button {
-  margin: 2vw !important;
+  color: white;
+  padding: 20px 30px 20px 30px;
+  margin: 1vw 1vw 2.5vw 1vw !important;
   z-index: 2;
+  background-color: transparent;
+  background-image: url("../img/submit-btn.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 20px !important;
+}
+
+#submit-txt {
+  background: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255,149,0,1) 70%);  ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #footer {
   color: orange;
   z-index: 2;
+}
+
+#footer p {
+  margin: 0;
+  padding: 0%;
 }
 
