@@ -16,6 +16,8 @@ body {
 
 #start {
   position: absolute;
+  margin: 100px;
+  margin-left: 400px;
   width: 150px;
 }
 
@@ -44,6 +46,11 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   font-family: 'Raleway', sans-serif;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
 
 
 }
@@ -92,3 +99,40 @@ button {
   padding: 0%;
 }
 
+.hidden {
+  display: none;
+}
+
+/* animation */
+
+.beep {
+  animation-name: ghost;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+
+}
+
+@keyframes ghost {
+	from {
+		/* position: absolute; */
+		bottom: 265px;
+		left: 20px;
+		width: 200px;
+		height: 110px;
+		border: none;
+		background-image: url("../img/beep.png");
+		/* z-index: -1; */
+	}
+
+	to {
+		left: 95%;
+		bottom: 130%;
+		background-image: none;
+	}
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
