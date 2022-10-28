@@ -6,26 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
   <script src="js/scripts.js"></script>
   <title>Neighbor</title>
 </head>
 <body>
+  <img src="img/start-pump.png" alt="START" id="start" class="animate__animated animate__fadeInDown">
   <div class="house">
-    <img src="img/start-pump.png" alt="START" id="start">
-    <form id="form" class="text-center">
-      <label for="name">Enter your name:</label>
-      <br>
-      <input type="text" id="name" name="name" max="30">
-      <br>
-      <label for="number">Pick a number:</label>
-      <br>
-      <input type="number" id="number" name="number" min="0" max="100">
-      <br>
-      <button type="submit"><span id="submit-txt">SUBMIT</span></button>
-    </form>
-    <div id="footer">
-      <p>footer</p>
+    <div id="formNest" class="hidden">
+      <form id="form" class="text-center">
+        <label for="name">Enter your name:</label>
+        <br>
+        <input type="text" id="name" name="name" max="30">
+        <br>
+        <label for="number">Pick a number:</label>
+        <br>
+        <input type="number" id="number" name="number" min="0" max="100">
+        <br>
+        <button type="submit"><span id="submit-txt">SUBMIT</span></button>
+      </form>
     </div>
+      <div id="footer">
+    </div>
+      <p>footer</p>
+   
   </div>
 </body>
 </html>

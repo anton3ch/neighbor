@@ -2,23 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 html {
-  max-height: 1000px !important;
+  /* max-height: 1000px !important; */
   box-sizing: content-box;
   font-family: 'Raleway', sans-serif;
   height: 100% !important;
 }
 
 body {
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(50,9,121,1) 33%, rgba(255,0,254,1) 100%);
+  background: rgb(231,0,246);
+  background: linear-gradient(0deg, rgba(231,0,246,1) 0%, rgba(7,8,42,1) 100%);
   background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 #start {
   position: absolute;
-  margin: 100px;
-  margin-left: 400px;
-  width: 150px;
+  margin-top: 0;
+  padding: 0;
+  margin-left: 100px;
+  width: 300px;
+  top: -20px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  cursor: pointer; 
+
 }
 
 .house {
@@ -29,7 +40,7 @@ body {
   background-position-y: 100%;
   background-size: contain;
   background-repeat: no-repeat; 
-  min-height: 1100px;
+  min-height: 1050px;
   
   
 }
@@ -104,12 +115,17 @@ button {
 }
 
 /* animation */
-
+/* 
 .beep {
   animation-name: ghost;
   animation-duration: 5s;
   animation-timing-function: linear;
 
+} */
+
+.animate__animated.animate__fadeInDown {
+  --animate-delay: 1s;
+  --animate-duration: 2s;
 }
 
 @keyframes ghost {

@@ -1,3 +1,43 @@
+//UI
+
+function createBeep(){
+  const img = document.createElement("img");
+  document.body.append(img);
+  img.setAttribute("src", "../img/beep.png");
+  img.setAttribute("class", "beep");
+  img.setAttribute("width", "150px");
+  img.setAttribute("alt", "Beep!");
+
+}
+
+function handleForm(){
+  const form = document.getElementById("form");
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    
+    createBeep();
+
+    const userNum = document.getElementById("number").value;
+    const userName = document.getElementById("name").value;
+    document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeOut");
+  });
+};
+
+
+
+
+window.addEventListener("load", function(){
+  const start = document.getElementById("start");
+
+  start.addEventListener("click", function(){
+    document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeIn");
+    start.setAttribute("class", "hidden");
+  })
+  handleForm()
+});
+
+
 
 
 // Business logic
@@ -27,33 +67,4 @@ function beepBoop(arr) {
 }
 
 beepBoop(stringArr);
-
-//UI
-
-function createBeep(){
-  const img = document.createElement("img");
-  document.body.append(img);
-  img.setAttribute("src", "../img/beep.png");
-  img.setAttribute("class", "beep");
-  img.setAttribute("width", "150px");
-  img.setAttribute("alt", "Beep!");
-
-}
-
-function handleForm(){
-  const form = document.getElementById("form");
-  form.addEventListener("submit", function(event){
-    event.preventDefault();
-
-    
-    createBeep();
-
-    const userNum = document.getElementById("number").value;
-    const userName = document.getElementById("name").value;
-    document.getElementById("form").setAttribute("class", "hidden");
-  });
-};
-
-window.addEventListener("load", handleForm);
-
 
