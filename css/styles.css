@@ -1,0 +1,14 @@
+body {
+  height: 100%;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(50,9,121,1) 33%, rgba(255,0,254,1) 100%);
+  background-image: url("house.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#house {
+  
+  /* width: 100%;
+  margin: auto; */
+}
