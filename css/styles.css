@@ -1,14 +1,45 @@
 body {
-  height: 100%;
+  max-height: 50% !important;
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(50,9,121,1) 33%, rgba(255,0,254,1) 100%);
-  background-image: url("house.png");
+  /* background-image: url("house.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
-#house {
-  
-  /* width: 100%;
-  margin: auto; */
+#form {
+  margin-bottom: 100%;
+  padding-top: 100px;
+  /* background-color: transparent;
+  background-image: url("../img/inputGhost.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+
 }
+
+#ghostInput
+
+label {
+  margin: 2vw;
+}
+
+input {
+  margin: 2vw;
+}
+
+button {
+  margin: 2vw !important;
+}
+
+
+#house {
+  position: absolute;
+  max-width: 100%;
+  bottom: 0%;
+}
+
+#footer {
+  color: orange;
+  z-index: 2;
+}
+
