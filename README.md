@@ -14,3 +14,6 @@ Test: "All digits with the number 2 are replaced with "Boop!"
 Code: beepBoop(3)
 Expected Output: ["0", "1", "Boop!", "Won't you be my neighbor?"]
 
+Test: "All digits with the number 1 are replaced with "Beep!"
+Code: beepBoop(3)
+Expected Output: ["0", "1", "Boop!", "Won't you be my neighbor?"]

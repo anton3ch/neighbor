@@ -23,6 +23,8 @@ function beepBoop(arr) {
       console.log("Won't you be my neighbor?")
     } else if (arr[i].includes("2") === true) {
       console.log("Boop!")
+    } else if (arr[i].includes("1") === true) {
+      console.log("Beep!")
     } else {
       console.log(arr[i])
     }
