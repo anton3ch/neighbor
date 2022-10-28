@@ -122,24 +122,50 @@ button {
   list-style: none;
   border-radius: 20px;
   border: 2px solid orange;
+  animation-name: floatingHand;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
-.output ul {
-  padding-right: 40px;
+ ul {
+  /* padding-left: 40px; */
+  padding: 0px !important;
 }
 
-.output li {
+li {
   list-style: none;
 }
 
 /* animation */
 
 .ghost {
+  position: absolute;
   animation-name: ghost;
   animation-duration: 5s;
   animation-timing-function: linear;
 
 } 
+
+.ghost2 {
+  animation-name: ghost2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0.7s;
+
+} 
+
+.ghost3 {
+  animation-name: ghost3;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0.5;
+
+} 
+
+.ghost3::after {
+  display: none;
+}
 
 .animate__animated.animate__fadeInDown {
   --animate-delay: 1s;
@@ -147,35 +173,126 @@ button {
 }
 
 @keyframes ghost {
-	from {
+	0% {
 		position: absolute;
-		bottom: 20px;
-		right: 20px;
+    display: block;
+		bottom: 5%;
+		left: 5%;
 		width: 200px;
 		height: auto;
 		z-index: 2;
     opacity: 0;
 	}
-  10% {
+  20% {
     opacity: 1;
-    transform: translate(120px, 45px);
+    bottom: 25%;
+		left: 25%;
   }
-  10% {
-    opacity: 1;
-    transform: translate(240px, 1215px);
+  40% {
+    opacity: 0.5;
+    bottom: 30%;
+		left: 40%;
   }
-  10% {
-    opacity: 1;
-    transform: translate(120px, 45px);
-  }
-
   60% {
     opacity: 1;
-    transform: translate(50px, 25px);
+    bottom: 60%;
+		left: 60%;
   }
 
-	to {
+  80% {
+    opacity: 0.5;
+    bottom: 70%;
+		left: 80%;
+  }
+
+	100% {
     position: absolute;
+		left: 65%;
+		bottom: 110%;
+		background-image: none;
+    opacity: 0;
+    display: none;
+	}
+}
+
+@keyframes ghost2 {
+	0% {
+		position: absolute;
+    display: block;
+		bottom: 5%;
+		left: 50%;
+		width: 200px;
+		height: auto;
+		z-index: 2;
+    opacity: 0;
+	}
+  20% {
+    opacity: 1;
+    bottom: 15%;
+		left: 35%;
+  }
+  40% {
+    opacity: 0.5;
+    bottom: 35%;
+		left: 45%;
+  }
+  60% {
+    opacity: 1;
+    bottom: 64%;
+		left: 69%;
+  }
+
+  80% {
+    opacity: 0.5;
+    bottom: 75%;
+		left: 83%;
+  }
+
+	100% {
+    position: absolute;
+		left: 95%;
+		bottom: 110%;
+		background-image: none;
+    opacity: 0;
+    display: none;
+	}
+}
+
+@keyframes ghost3 {
+	0% {
+		position: absolute;
+    display: block;
+		bottom: 5%;
+		right: 5%;
+		width: 200px;
+		height: auto;
+		z-index: 2;
+    opacity: 0;
+	}
+  20% {
+    opacity: 1;
+    bottom: 25%;
+		right: 25%;
+  }
+  40% {
+    opacity: 0.5;
+    bottom: 30%;
+		right: 40%;
+  }
+  60% {
+    opacity: 1;
+    bottom: 60%;
+		right: 80%;
+  }
+
+  80% {
+    opacity: 0.5;
+    bottom: 70%;
+		right: 80%;
+  }
+
+	100% {
+    position: relative;
 		right: 95%;
 		bottom: 110%;
 		background-image: none;
@@ -185,12 +302,12 @@ button {
 
 @keyframes floating {
   0% { transform: translate(0,  30px); }
-  50%  { transform: translate(0, 45px); }
+  50%  { transform: translate(0, 37px); }
   100%   { transform: translate(0, 30px); }   
 }
 
 @keyframes floatingHand {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }   
+  100%   { transform: translate(0, 0px); }   
 }
