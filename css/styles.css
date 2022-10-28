@@ -1,41 +1,57 @@
+html {
+  max-height: 1000px !important;
+  box-sizing: content-box;
+}
+
 body {
-  max-height: 50% !important;
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(50,9,121,1) 33%, rgba(255,0,254,1) 100%);
-  /* background-image: url("house.png");
+  
+}
+
+.house {
+  display: block;
+  background-color: transparent;
+  background-image: url("house.png");
+  background-position-x:  0%;
+  background-position-y: 50%;
   background-size: cover;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat; 
+  min-height: 800px;
+  
 }
 
 #form {
-  margin-bottom: 100%;
+  width: 100%;
   padding-top: 100px;
-  /* background-color: transparent;
-  background-image: url("../img/inputGhost.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
+  background-color: transparent;
+  background-image: url("../img/inputGhost.png");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: contain;
+  display: block;
+  background-repeat: no-repeat;
 
 }
 
-#ghostInput
+#ghostInput {
+  width: 100%;
+  z-index: 2;
+}
 
 label {
   margin: 2vw;
+  z-index: 2;
 }
 
 input {
   margin: 2vw;
+  z-index: 2;
 }
 
 button {
   margin: 2vw !important;
-}
-
-
-#house {
-  position: absolute;
-  max-width: 100%;
-  bottom: 0%;
+  z-index: 2;
 }
 
 #footer {
