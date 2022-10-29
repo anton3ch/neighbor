@@ -1,10 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
 
 html {
   /* max-height: 1000px !important; */
   box-sizing: content-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Eater', cursive;
   height: 100% !important;
 }
 
@@ -55,7 +55,7 @@ body {
   background-position-y: 50%;
   background-size: contain;
   background-repeat: no-repeat;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Eater', cursive;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -98,8 +98,13 @@ button {
 }
 
 #footer {
+  font-size: smaller;
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
   color: orange;
   z-index: 2;
+  opacity: 0.6;
 }
 
 #footer p {
@@ -112,6 +117,7 @@ button {
 }
 
 #output {
+  font-family: 'Eater', cursive;
   position: absolute;
   padding: 20px;
   width: 400px;
@@ -127,6 +133,7 @@ button {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
 
  ul {
   /* padding-left: 40px; */

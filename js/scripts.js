@@ -7,17 +7,19 @@ function transformToStringArr (number, arr) {
 }
 
 function beepBoop(arr) {
+  let array = [];
   for(let i = 0; i < arr.length; i++){
-    if(arr[i].includes("3") === true) {
-      createWontYouBeMyNeighbor();
-    } else if (arr[i].includes("2") === true) {
-      createBoop();
-    } else if (arr[i].includes("1") === true) {
-      createBeep();
+    if(arr[i].includes("3")) {
+      array.push("Won't you be my neighbor?");
+    } else if (arr[i].includes("2")) {
+      array.push("Boop!");
+    } else if (arr[i].includes("1")) {
+      array.push("Beep!");
     } else {
-      createNumber(arr[i]);
+      array.push(arr[i]);
     }
   }
+  return array;
 }
 
 //UI
@@ -35,7 +37,6 @@ function launchBeep(){
   img.setAttribute("src", "../img/beep.png");
   img.setAttribute("class", "ghost");
   img.setAttribute("width", "150px");
-  // img.setAttribute("alt", "Beep!");
   setTimeout(function(){
     img.setAttribute("class", "hidden");
   }, 5000);
@@ -51,10 +52,8 @@ function createBoop(){
 function launchBoop(){
   const img = document.getElementById("img2");
   document.body.append(img);
-  img.setAttribute("src", "../img/boop.png");
   img.setAttribute("class", "ghost2");
   img.setAttribute("width", "150px");
-  // img.setAttribute("alt", "Boop!");
   setTimeout(function(){
     img.setAttribute("class", "hidden");
   }, 5000);
@@ -70,24 +69,11 @@ function createWontYouBeMyNeighbor(){
 function launchWontYouBeMyNeighbor(){
   const img = document.getElementById("img3");
   document.body.append(img);
-  img.setAttribute("src", "../img/neighbor.png");
   img.setAttribute("class", "ghost3");
   img.setAttribute("width", "150px");
-  // img.setAttribute("alt", "Won't you be my neighbor?");
   setTimeout(function(){
     img.setAttribute("class", "hidden");
   }, 10000);
-
-}
-
-function createNumber(number){
-
-  //list
-  const li = document.createElement('li');
-  const ul = document.querySelector("ul");
-  li.append(`${number}`);
-  ul.append(li);
-}
 
 function handleForm(){
   const form = document.getElementById("form");
@@ -95,17 +81,19 @@ function handleForm(){
     event.preventDefault();
     const userNum = document.getElementById("number").value;
     const userName = document.getElementById("name").value;
-    document.getElementById("output").removeAttribute("class");
 
     let stringArr = [];
     transformToStringArr(userNum, stringArr);
     const h3 = document.getElementById("h3");
     h3.innerText = "Scary Halloween, " + userName + "!";
-    beepBoop(stringArr);
+    beepBoop(stringArr).forEach(function(element, index) {
+      setTimeout(function(){
+        $('ul#list').append('<li>' + element + '</li>');
+      }, index * 250)});
     launchBeep();
     launchBoop();
     launchWontYouBeMyNeighbor();
-    $('#output').show();
+    $('#output').slideDown();
     document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeOut");
   });
 }
@@ -115,13 +103,12 @@ function handleForm(){
 
 window.addEventListener("load", function(){
   const start = document.getElementById("start");
-  const reset = document.getElementById("reset");
 
   handleForm();
-    $('button#reset').click(function () {
-      $('#list').empty();
-      $('#output').hide();
-      document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeIn");
+  $('button#reset').click(function () {
+    $('#output').slideUp();
+    $('#list').empty();
+    document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeIn");
   });
     
 
