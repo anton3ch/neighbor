@@ -72,7 +72,7 @@ Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4", "5", 
  
 ## Known Bugs
 
-* not adapted for small screens 
+* if the reset button is clicked before the list is complete the rest of the list will be added before the next iteration
 
 ## License
 
