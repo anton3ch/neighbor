@@ -10,7 +10,7 @@ html {
 
 body {
   background: rgb(216, 135, 20);
-  background: linear-gradient(180deg, rgba(15,10,3,1) 0%, rgba(255,148,0,1) 72%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(180deg, rgba(15,10,3,1) 0%, rgba(255,148,0,1) 83%, rgba(0,0,0,1) 100%);
   background-repeat: no-repeat;
   width: 100%;
   background-attachment: fixed;
@@ -18,6 +18,7 @@ body {
 
 #start {
   position: absolute;
+  z-index: 2;
   margin-top: 0px;
   padding: 0;
   margin-left: 100px;
@@ -28,17 +29,19 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   cursor: pointer; 
-
 }
 
 .house {
   display: block;
   /* position: absolute; */
+  z-index: 0;
+  bottom: 0;
+  left: 0%;
   width: 100%;
   background-color: transparent;
-  background-image: url("house.png");
+  background-image: url("../img/house.png");
   background-position-x:  50%;
-  background-position-y: 100%;
+  background-position-y: bottom;
   background-size: contain;
   background-repeat: no-repeat; 
   min-height: 1025px;
@@ -46,10 +49,13 @@ body {
 
 #form {
   display: block;
+  /* position: absolute; */
+  z-index: 2;
   width: 100%;
   padding-top: 100px;
   margin-top: 0px;
   top: 30px;
+  left: 200px;
   background-color: transparent;
   background-image: url("../img/inputGhost.png");
   background-position-x: 50%;
@@ -135,16 +141,28 @@ button {
   animation-timing-function: ease-in-out;
 }
 
+#reset-txt {
+  background: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255,149,0,1) 70%);  ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media only screen and (max-width: 1150px) {
   .house {
+    position: absolute;
     min-height: 900px;
   }
 }
 
+/* @media only screen and (min-width: 1720px) {
+  .house {
+    min-height: 1700px;
+  }
+} */
+
 @media only screen and (max-width: 500px) {
   .house {
     min-height: 850px;
-
   }
   #start {
     width: 200px;
@@ -160,7 +178,6 @@ button {
     margin: auto;
   }
 }
-
 
  ul {
   padding: 0px !important;
@@ -220,6 +237,7 @@ li {
     width: 100px;
   }
 }
+
 /* :hover {
   animation: shake 0.5s; 
 } */
@@ -357,32 +375,22 @@ li {
 		left: 30%;
     opacity: 0.5;
 	}
-/* 
-  49% {
-    right: 85%;
-		bottom: 8%;
-  }
-
-  50% {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    right: 85%;
-		bottom: 8%;
-  }
-
-  51% {
-    right: 85%;
-		bottom: 8%;
-  } */
 
   60% {
-		right: 47%;
-    opacity: 1;
+		left: 47%;
+    opacity: 0.7;
+	}
+
+  90% {
+		left: 75%;
+    opacity: 0.4;
 	}
 
 	100% {
-		right: 5%;
-    opacity: 0.5;
+		left: 85%;
+    opacity: 0;
+    display: none;
+    position: absolute;
 	}
 }
 

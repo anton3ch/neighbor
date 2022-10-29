@@ -13,27 +13,12 @@
 </head>
 <body>
   <img src="img/start-pump.png" alt="START" id="start" class="animate__animated animate__fadeInDown">
-  <div class="house">
-    <div id="formNest" class="hidden">
-      <form id="form" class="text-center">
-        <label for="name">Enter your name:</label>
-        <br>
-        <input type="text" id="name" name="name" max="30" placeholder="Freddy Krueger" class="text-center">
-        <br>
-        <label for="number">Pick a number:</label>
-        <br>
-        <input type="number" id="number" name="number" min="0" max="30" class="text-center" value="13">
-        <br>
-        <button type="submit"><span id="submit-txt">SUBMIT</span></button>
-      </form>
-    </div>
-  </div>
   <div class="hidden " id="output">
     <h3 id="h3" class="text-center"></h3>
     <ul id="list" class="text-center ">
     </ul>
     <div class="text-center">
-      <button id="reset"><span id="submit-txt">RESET</span></button>
+      <button id="reset"><span id="reset-txt">RESET</span></button>
     </div>
   </div>
   <div class="hidden">
@@ -45,5 +30,20 @@
     <p>&#169; 2022 Copyright: <span class="text-reset fw-bold">Anton Ch</span></p>
   </div>
   <img src="img/wanderer.png" alt="wandering ghost" id="wanderer">
+  <div class="house">
+    <div id="formNest" class="hidden">
+      <form id="form" class="text-center">
+        <label for="name">Enter your name:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Freddy Krueger" class="text-center">
+        <br>
+        <label for="number">Pick a number:</label>
+        <br>
+        <input type="number" id="number" name="number" min="0" max="30" class="text-center" value="13">
+        <br>
+        <button type="submit"><span id="submit-txt">SUBMIT</span></button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
