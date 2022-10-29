@@ -65,7 +65,11 @@ function handleForm(){
     const h3 = document.getElementById("h3");
     
     transformToStringArr(userNum, stringArr);
-    h3.innerText = "Have a Scary Halloween, " + userName + "!";
+    if(userName){
+      h3.innerText = "Have a Scary Halloween, " + userName + "!";
+    } else {
+      h3.innerText = "Have a Scary Halloween!";
+    }
     beepBoop(stringArr).forEach(function(element, index) {
       setTimeout(function(){
         $('ul#list').append('<li>' + element + '</li>');
