@@ -143,6 +143,7 @@ li {
   position: absolute;
   animation-name: ghost;
   animation-duration: 5s;
+  animation-delay: 0.9s;
   animation-timing-function: linear;
 
 } 
@@ -157,15 +158,11 @@ li {
 
 .ghost3 {
   animation-name: ghost3;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-delay: 0.5;
 
 } 
-
-.ghost3::after {
-  display: none;
-}
 
 .animate__animated.animate__fadeInDown {
   --animate-delay: 1s;
@@ -292,10 +289,8 @@ li {
   }
 
 	100% {
-    position: relative;
 		right: 95%;
 		bottom: 110%;
-		background-image: none;
     opacity: 0;
 	}
 }

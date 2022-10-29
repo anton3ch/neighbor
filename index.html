@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/animate.css">
+  <script src="js/jquery-3.6.1.js"></script>
   <script src="js/scripts.js"></script>
   <title>Neighbor</title>
 </head>
@@ -17,11 +18,11 @@
       <form id="form" class="text-center">
         <label for="name">Enter your name:</label>
         <br>
-        <input type="text" id="name" name="name" max="30">
+        <input type="text" id="name" name="name" max="30" placeholder="Freddy Krueger" class="text-center">
         <br>
         <label for="number">Pick a number:</label>
         <br>
-        <input type="number" id="number" name="number" min="0" max="100">
+        <input type="number" id="number" name="number" min="0" max="30" class="text-center" value="13">
         <br>
         <button type="submit"><span id="submit-txt">SUBMIT</span></button>
       </form>
@@ -37,6 +38,11 @@
     <div class="text-center">
       <button id="reset"><span id="submit-txt">RESET</span></button>
     </div>
+  </div>
+  <div class="hidden">
+    <img src="img/beep.png" alt="Beep!" id="img1">
+    <img src="img/boop.png" alt="Boop!" id="img2">
+    <img src="img/neighbor.png" alt="Won't you be my neighbor?" id="img3">
   </div>
 </body>
 </html>
