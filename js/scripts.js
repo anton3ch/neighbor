@@ -24,13 +24,6 @@ function beepBoop(arr) {
 
 //UI
 
-function createBeep(){
-  //list
-  const li = document.createElement('li');
-  const ul = document.querySelector("ul");
-  li.append("Beep!");
-  ul.append(li);
-}
 function launchBeep(){
   const img = document.getElementById("img1");
   document.body.append(img);
@@ -39,14 +32,7 @@ function launchBeep(){
   img.setAttribute("width", "150px");
   setTimeout(function(){
     img.setAttribute("class", "hidden");
-  }, 5000);
-}
-
-function createBoop(){
-  const li = document.createElement('li');
-  const ul = document.querySelector("ul");
-  li.append("Boop!");
-  ul.append(li);
+  }, 6000);
 }
 
 function launchBoop(){
@@ -56,14 +42,7 @@ function launchBoop(){
   img.setAttribute("width", "150px");
   setTimeout(function(){
     img.setAttribute("class", "hidden");
-  }, 5000);
-}
-
-function createWontYouBeMyNeighbor(){
-  const li = document.createElement('li');
-  const ul = document.querySelector("ul");
-  li.append("Won't you be my neighbor?");
-  ul.append(li);
+  }, 7000);
 }
 
 function launchWontYouBeMyNeighbor(){
@@ -73,7 +52,7 @@ function launchWontYouBeMyNeighbor(){
   img.setAttribute("width", "150px");
   setTimeout(function(){
     img.setAttribute("class", "hidden");
-  }, 10000);
+  }, 5000);
 }
 
 function handleForm(){
@@ -82,11 +61,11 @@ function handleForm(){
     event.preventDefault();
     const userNum = document.getElementById("number").value;
     const userName = document.getElementById("name").value;
-
     let stringArr = [];
-    transformToStringArr(userNum, stringArr);
     const h3 = document.getElementById("h3");
-    h3.innerText = "Scary Halloween, " + userName + "!";
+    
+    transformToStringArr(userNum, stringArr);
+    h3.innerText = "Have a Scary Halloween, " + userName + "!";
     beepBoop(stringArr).forEach(function(element, index) {
       setTimeout(function(){
         $('ul#list').append('<li>' + element + '</li>');
@@ -99,9 +78,6 @@ function handleForm(){
   });
 }
 
-
-
-
 window.addEventListener("load", function(){
   const start = document.getElementById("start");
 
@@ -111,16 +87,9 @@ window.addEventListener("load", function(){
     $('#list').empty();
     document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeIn");
   });
-    
-
-  // });
+  
   start.addEventListener("click", function(){
     document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeIn");
     start.setAttribute("class", "hidden");
   });
 });
-
-
-
-
-
