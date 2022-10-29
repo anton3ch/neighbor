@@ -78,7 +78,7 @@ function handleForm(){
     launchBoop();
     launchWontYouBeMyNeighbor();
     $('#output').slideDown();
-    document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeOut");
+    document.getElementById("formNest").setAttribute("class", "animate__animated animate__zoomOut");
   });
 }
 
@@ -89,11 +89,11 @@ window.addEventListener("load", function(){
   $('button#reset').click(function () {
     $('#output').slideUp();
     $('#list').empty();
-    document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeIn");
+    document.getElementById("formNest").setAttribute("class", "animate__animated animate__zoomInUp");
   });
   
   start.addEventListener("click", function(){
-    document.getElementById("formNest").setAttribute("class", "animate__animated animate__fadeIn");
+    document.getElementById("formNest").setAttribute("class", "animate__animated animate__zoomInUp");
     start.setAttribute("class", "hidden");
   });
 });

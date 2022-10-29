@@ -243,9 +243,9 @@ li {
   animation: shake 0.5s; 
 } */
 
-.animate__animated.animate__fadeInDown {
+.animate__animated.animate__zoomInUp {
   --animate-delay: 1s;
-  --animate-duration: 2s;
+  --animate-duration: 4s;
 }
 
 @keyframes ghost {
