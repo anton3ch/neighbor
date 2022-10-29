@@ -169,7 +169,26 @@ li {
   animation-timing-function: linear;
   animation-delay: 0.5;
 
-} 
+}
+
+#wanderer {
+  position: absolute;
+  width: 200px;
+  bottom: 5%;
+  animation-name: wanderer;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-delay: 0.5;
+}
+
+/* :hover {
+  animation: shake 0.5s; 
+
+} */
+
+
 
 .animate__animated.animate__fadeInDown {
   --animate-delay: 1s;
@@ -302,6 +321,52 @@ li {
 	}
 }
 
+@keyframes wanderer {
+	0% {
+    left: 10%;
+		width: 200px;
+		height: auto;
+		z-index: 2;
+    opacity: 0;
+	}
+
+  30% {
+		right: 30%;
+		bottom: 6%;
+    opacity: 0.5;
+    
+	}
+/* 
+  49% {
+    right: 85%;
+		bottom: 8%;
+  }
+
+  50% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    right: 85%;
+		bottom: 8%;
+  }
+
+  51% {
+    right: 85%;
+		bottom: 8%;
+  } */
+
+  60% {
+		right: 47%;
+		bottom: 7%;
+    opacity: 1;
+	}
+
+	100% {
+		right: 5%;
+		bottom: 8%;
+    opacity: 0.5;
+	}
+}
+
 @keyframes floating {
   0% { transform: translate(0,  30px); }
   50%  { transform: translate(0, 37px); }
@@ -312,4 +377,18 @@ li {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, 0px); }   
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

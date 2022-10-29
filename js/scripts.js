@@ -74,6 +74,7 @@ function launchWontYouBeMyNeighbor(){
   setTimeout(function(){
     img.setAttribute("class", "hidden");
   }, 10000);
+}
 
 function handleForm(){
   const form = document.getElementById("form");
