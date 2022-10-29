@@ -66,7 +66,6 @@ Test: "All digits with the number 1 are replaced with "Beep!"
 Code: beepBoop(3)
 Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?"]
 
-
 Test: "The hierarchy of substitutions that should be followed: 3 over 2, 2 over 1"
 Code: beepBoop(13)
 Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4", "5", "6", "7", "8", "9", "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?"]
