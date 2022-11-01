@@ -45,7 +45,7 @@ body {
   background-position-y: bottom;
   background-size: contain;
   background-repeat: no-repeat; 
-  min-height: 1025px;
+  min-height: 1050px;
 }
 
 #form {
@@ -97,6 +97,10 @@ button {
   background-repeat: no-repeat;
   border-radius: 20px !important;
   border: 0;
+}
+
+#reset {
+  margin-bottom: 0 !important;
 }
 
 #submit-txt {
@@ -182,6 +186,9 @@ button {
 
  ul {
   padding: 0px !important;
+  max-height: 600px;
+  overflow: hidden; 
+  overflow-y: scroll;
 }
 
 li {
@@ -245,7 +252,7 @@ li {
 
 .animate__animated.animate__zoomInUp {
   --animate-delay: 1s;
-  --animate-duration: 4s;
+  --animate-duration: 3s;
 }
 
 @keyframes ghost {

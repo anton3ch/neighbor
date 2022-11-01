@@ -27,7 +27,6 @@ function beepBoop(arr) {
 function launchBeep(){
   const img = document.getElementById("img1");
   document.body.append(img);
-  img.setAttribute("src", "../img/beep.png");
   img.setAttribute("class", "ghost");
   img.setAttribute("width", "150px");
   setTimeout(function(){
@@ -59,6 +58,7 @@ function handleForm(){
   const form = document.getElementById("form");
   form.addEventListener("submit", function(event){
     event.preventDefault();
+
     const userNum = document.getElementById("number").value;
     const userName = document.getElementById("name").value;
     let stringArr = [];
@@ -72,8 +72,15 @@ function handleForm(){
     }
     beepBoop(stringArr).forEach(function(element, index) {
       setTimeout(function(){
-        $('ul#list').append('<li>' + element + '</li>');
-      }, index * 250)});
+        $('ul#list').prepend('<li>' + element + '</li>');
+      }, index * 75)
+    });
+
+    $('button#reset').slideUp();
+    setTimeout(function(){
+        $('button#reset').slideDown();
+    }, 75 * stringArr.length);
+      
     launchBeep();
     launchBoop();
     launchWontYouBeMyNeighbor();
@@ -90,6 +97,7 @@ window.addEventListener("load", function(){
     $('#output').slideUp();
     $('#list').empty();
     document.getElementById("formNest").setAttribute("class", "animate__animated animate__zoomInUp");
+    $('button#reset').slideUp();
   });
   
   start.addEventListener("click", function(){
