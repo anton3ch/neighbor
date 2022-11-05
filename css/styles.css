@@ -6,6 +6,7 @@ html {
   box-sizing: content-box;
   font-family: 'Eater', cursive;
   height: 100% !important;
+  overflow: hidden;
 }
 
 body {
